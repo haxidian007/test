@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.page.dao.UserMapper">
+    <resultMap id="userMap" type="User">
+        <result column="ID" property="id"/>
+        <result column="page_name" property="name"/>
+        <result column="page_password" property="password"/>
+        <result column="page_phone" property="phone"/>
+    </resultMap>
+    <!--select查询语句-->
+    <select id="getUserList" parameterType="map" resultMap="userMap">
+        select * from pagetab where page_password=#{query} limit #{count},#{pagination};
+    </select>
+    <select id="getUserListAll" parameterType="map"  resultMap="userMap">
+        select * from pagetab limit #{count},#{pagination};
+    </select>
+    <select id="nextpage" parameterType="map" resultMap="userMap">
+        select * from pagetab where page_password=#{query} limit #{count},#{pagination};
+    </select>
+
+</mapper>

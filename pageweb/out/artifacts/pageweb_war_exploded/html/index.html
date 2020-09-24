@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:json="http://java.sun.com/xml/ns/javaee">
+<head>
+    <meta charset="UTF-8">
+    <title>界面</title>
+</head>
+
+<body>
+    <table cellpadding="0" cellspacing="0" border="1" width="60%" align="center">
+        <thead>
+            <tr>
+                <th colspan="4" align="right"><input id="querytext" type="text" ><input type="button" value="查询" onclick="query()"></th>
+            </tr>
+            <tr>
+                <th width="20%">ID</th>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>电话</th>
+            </tr>
+        </thead>
+        <tbody id="ulist">
+        </tbody>
+        <tr align="center">
+            <td colspan="4"><input id="previouspage" type="button" value="上一页" onclick="previouspage()">&nbsp;&nbsp;&nbsp;&nbsp;<input id="nextpage" type="button" value="下一页" onclick="nextpage()"></td>
+        </tr>
+    </table>
+<script src="../js/pagejs.js">
+
+</script>
+</body>
+</html>
