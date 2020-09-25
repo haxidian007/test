@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="bank"/>
+    <schema id="3" parent="1" name="db_air"/>
+    <schema id="4" parent="1" name="dl"/>
+    <schema id="5" parent="1" name="game_db"/>
+    <schema id="6" parent="1" name="hp"/>
+    <schema id="7" parent="1" name="ims"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="mybatis">
+      <Visible>1</Visible>
+    </schema>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="presone"/>
+    <schema id="12" parent="1" name="shop"/>
+    <schema id="13" parent="1" name="test"/>
+    <table id="14" parent="9" name="blog"/>
+    <table id="15" parent="9" name="pagetab"/>
+    <table id="16" parent="9" name="user"/>
+    <column id="17" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="18" parent="14" name="title">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="19" parent="14" name="author">
+      <Position>3</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="20" parent="14" name="createtime">
+      <Position>4</Position>
+      <DataType>DATETIME(19)|93s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="21" parent="14" name="views">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="15" name="ID">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="23" parent="15" name="page_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <column id="24" parent="15" name="page_password">
+      <Position>3</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+    </column>
+    <column id="25" parent="15" name="page_phone">
+      <Position>4</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <key id="26" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+    </column>
+    <column id="29" parent="16" name="pwd">
+      <Position>3</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+    </column>
+  </database-model>
+</dataSource>
